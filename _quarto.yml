@@ -1,0 +1,18 @@
+project:
+  type: website
+  output-dir: _site
+
+format:
+  html:
+    theme: default
+    toc: true
+
+filters:
+  - filters/obsidian-wikilinks.lua
+  - filters/obsidian-tikz.lua
+  - danmackinlay/tikz
+
+# Render both .md and .qmd files
+render:
+  - "*.md"
+  - "*.qmd"
