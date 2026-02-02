@@ -60,7 +60,7 @@ format:
         input-position: "top"  # Comment box position (top or bottom)
         theme:
           light: "light"  # Light mode theme
-          dark: "dark_dimmed"  # Dark mode theme
+          dark: "transparent_dark"  # Dark mode theme
 
 filters:
   - ../_settings/filters/atomic-include.lua
