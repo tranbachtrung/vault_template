@@ -1,11 +1,12 @@
 _site/
-.quarto/
 *.html
 .DS_Store
+.luarc.json
 
-/.quarto/
-
-/.luarc.json
+# Application folders
+.obsidian/
+.claude/
+.quarto/
 
 # Google Colab notebooks (synced via Google Drive Desktop)
 code/codebases/google_colab/
