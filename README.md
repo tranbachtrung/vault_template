@@ -121,6 +121,7 @@ Comprehensive documentation is organized in the [vault_matter/docs/](vault_matte
 - **Pandoc**: Document conversion (bundled with Quarto)
 - **Lua**: Filter scripting for Obsidian↔Quarto compatibility
 - **Python/R**: Optional for computational content
+- **Google Colab**: Collaborative Jupyter notebooks with auto-sync
 
 ### Obsidian Plugins
 
@@ -148,6 +149,9 @@ vault_template/
 │   └── categories/           # Category overview notes (Bases feature)
 ├── graphics/                 # Images and diagrams
 ├── code/                     # Code projects and sandboxes
+│   └── codebases/
+│       ├── google_colab/     # Collaborative notebooks (synced via Drive)
+│       └── sandboxes/        # Experimental code
 └── publishing/               # Quarto publishing projects
     ├── _settings/            # Shared Lua filters
     ├── template_website/     # Website template

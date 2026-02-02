@@ -591,20 +591,40 @@ graphics/
 ```
 code/
 └── codebases/
-└── sandboxes/
-    ├── probability_simulations/
-    └── measure_theory_examples/
+    ├── google_colab/          # Collaborative notebooks (synced via Drive)
+    │   ├── project_alpha/
+    │   ├── project_beta/
+    │   └── README.md
+    └── sandboxes/             # Experimental code
+        ├── probability_simulations/
+        └── measure_theory_examples/
 ```
 
-codebases/: holds complete codebases
+**Subdirectories**:
 
-sandboxes/: holds scrap codes for experimentation
+#### codebases/google_colab/
+- **Purpose**: Collaborative Jupyter notebooks synced from Google Colab
+- **Organization**: Project-based subdirectories
+- **Sync**: Auto-synced via Google Drive for Desktop
+- **Git**: Entire folder is gitignored (excluded from version control)
+- **Workflow**: 
+  - Active work happens in Google Colab with comments
+  - Changes auto-sync to local vault
+  - Manually extract insights to `notes_atomic/`
+- **Setup**: See [Tools & Setup - Google Colab](TOOLS_AND_SETUP.md#google-colab)
+
+#### codebases/ (other)
+- **Purpose**: Complete codebases for projects
+
+#### sandboxes/
+- **Purpose**: Scrap code for experimentation
 
 **Use Cases**:
 - Monte Carlo simulations
 - Computational examples
 - Algorithm implementations
 - Interactive demonstrations
+- Collaborative data analysis
 
 **Integration with Quarto**: Can include code directly in `.qmd` files or reference external scripts.
 

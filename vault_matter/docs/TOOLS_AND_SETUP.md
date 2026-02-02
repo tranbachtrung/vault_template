@@ -12,6 +12,7 @@ Complete installation and configuration guide for all tools in the mathematical 
 - [Supporting Tools](#supporting-tools)
   - [LaTeX Distribution](#latex-distribution)
   - [Inkscape](#inkscape)
+  - [Google Colab](#google-colab)
 - [Programming Languages](#programming-languages)
 - [Verification](#verification)
 
@@ -300,6 +301,65 @@ inkscape --version
 ```
 
 **Usage**: Automatically invoked by `quarto_tikz` extension during rendering.
+
+---
+
+### Google Colab
+
+**Purpose**: Collaborative Jupyter notebooks with automatic syncing to vault
+
+**Installation**:
+
+1. **Install Google Drive for Desktop**:
+   ```bash
+   # macOS
+   brew install --cask google-drive
+   
+   # Or download from https://www.google.com/drive/download/
+   ```
+
+2. **Sign in to Google Drive**:
+   - Open Google Drive for Desktop
+   - Sign in with your Google account
+   - Choose "Mirror files" or "Stream files" mode
+
+**Configuration**:
+
+1. **Mount vault folder to Google Drive**:
+   - Option A: Right-click `vault_template/code/codebases/google_colab/` in Finder
+   - Select "Make Available Offline" if using streaming mode
+   
+   - Option B: Create a Drive folder and sync it locally:
+     ```bash
+     # In Google Drive web, create folder "vault_colab"
+     # In Drive Desktop settings, configure it to sync to:
+     # /Users/your-username/Desktop/vault_template/code/codebases/google_colab/
+     ```
+
+2. **Create project folders**:
+   ```
+   google_colab/
+   ├── project_alpha/
+   ├── project_beta/
+   └── shared_research/
+   ```
+
+3. **Share with collaborators** (per project):
+   - In Google Drive, right-click project folder
+   - Click "Share"
+   - Add collaborator emails with "Editor" access
+
+**Workflow**:
+
+1. Open `.ipynb` files from Google Drive in Colab
+2. Use Colab's comment features for collaboration
+3. Changes auto-sync to vault via Drive Desktop
+4. Manually extract insights to `notes_atomic/` as needed
+
+**Notes**:
+- Entire `google_colab/` folder is gitignored
+- No version control for notebooks (use Colab's revision history)
+- Knowledge transfer from notebooks to atomic notes is manual
 
 ---
 
