@@ -310,6 +310,39 @@ git push
 2. Source: Deploy from branch
 3. Branch: `gh-pages` / `(root)`
 
+### Disabling GitHub Actions (Local Build Only)
+
+**If you prefer building locally and want to avoid GitHub Actions runner issues:**
+
+GitHub Actions can sometimes fail with runner availability errors like:
+```
+The job was not acquired by Runner of type hosted even after multiple attempts
+Internal server error. Correlation ID: xxxxx
+```
+
+**To disable automatic builds:**
+
+1. **Option 1: Disable Actions in repository settings**
+   - Go to `https://github.com/username/repository/settings/actions`
+   - Under "Actions permissions", select **"Disable actions"**
+   - Save
+
+2. **Option 2: Delete the workflow file**
+   ```bash
+   git rm -rf .github/workflows
+   git commit -m "Remove GitHub Actions - building locally only"
+   git push origin main
+   ```
+
+**Then use local deployment:**
+```bash
+cd publishing/template_website/
+quarto render                    # Build locally
+quarto publish gh-pages         # Deploy to GitHub Pages
+```
+
+This approach gives you full control - build when you want, deploy when ready, no runner errors.
+
 ### Repository Settings
 
 **Public vs Private**:

@@ -58,7 +58,9 @@ format:
         reactions-enabled: true  # Enable reaction emojis
         loading: "lazy"  # Lazy load comments for better performance
         input-position: "top"  # Comment box position (top or bottom)
-        theme: "preferred_color_scheme"  # Auto-match light/dark mode
+        theme:
+          light: "light"  # Light mode theme
+          dark: "dark_dimmed"  # Dark mode theme
 
 filters:
   - ../_settings/filters/atomic-include.lua
