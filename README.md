@@ -149,9 +149,9 @@ vault_template/
 │   └── categories/           # Category overview notes (Bases feature)
 ├── graphics/                 # Images and diagrams
 ├── code/                     # Code projects and sandboxes
-│   └── codebases/
-│       ├── google_colab/     # Collaborative notebooks (synced via Drive)
-│       └── sandboxes/        # Experimental code
+│   ├── google_colab/         # Collaborative notebooks (synced via Drive)
+│   ├── sandboxes/            # Experimental code
+│   └── codebases/            # Complete codebases
 └── publishing/               # Quarto publishing projects
     ├── _settings/            # Shared Lua filters
     ├── template_website/     # Website template

@@ -9,7 +9,7 @@ _site/
 .quarto/
 
 # Google Colab notebooks (synced via Google Drive Desktop)
-code/codebases/google_colab/
+code/google_colab/
 
 # Python
 __pycache__/

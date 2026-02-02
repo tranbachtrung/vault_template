@@ -326,14 +326,14 @@ inkscape --version
 **Configuration**:
 
 1. **Mount vault folder to Google Drive**:
-   - Option A: Right-click `vault_template/code/codebases/google_colab/` in Finder
+   - Option A: Right-click `vault_template/code/google_colab/` in Finder
    - Select "Make Available Offline" if using streaming mode
    
    - Option B: Create a Drive folder and sync it locally:
      ```bash
      # In Google Drive web, create folder "vault_colab"
      # In Drive Desktop settings, configure it to sync to:
-     # /Users/your-username/Desktop/vault_template/code/codebases/google_colab/
+     # /Users/your-username/Desktop/vault_template/code/google_colab/
      ```
 
 2. **Create project folders**:

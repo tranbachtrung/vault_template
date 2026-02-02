@@ -28,6 +28,8 @@ vault_template                 # Vault root
 ├── vault_matter/              # Vault documentation
 ├── graphics/                  # Images and diagrams
 ├── code/                      # Code projects
+│   ├── google_colab/          # Collaborative notebooks
+│   └── sandboxes/             # Experimental code
 ├── publishing/                # Quarto projects
 ├── .obsidian/                 # Obsidian settings
 ├── .git/                      # Git repository
@@ -590,19 +592,19 @@ graphics/
 **Structure**:
 ```
 code/
-└── codebases/
-    ├── google_colab/          # Collaborative notebooks (synced via Drive)
-    │   ├── project_alpha/
-    │   ├── project_beta/
-    │   └── README.md
-    └── sandboxes/             # Experimental code
-        ├── probability_simulations/
-        └── measure_theory_examples/
+├── google_colab/          # Collaborative notebooks (synced via Drive)
+│   ├── project_alpha/
+│   ├── project_beta/
+│   └── README.md
+├── sandboxes/             # Experimental code
+│   ├── probability_simulations/
+│   └── measure_theory_examples/
+└── codebases/             # Complete codebases (future use)
 ```
 
 **Subdirectories**:
 
-#### codebases/google_colab/
+#### google_colab/
 - **Purpose**: Collaborative Jupyter notebooks synced from Google Colab
 - **Organization**: Project-based subdirectories
 - **Sync**: Auto-synced via Google Drive for Desktop
@@ -613,11 +615,11 @@ code/
   - Manually extract insights to `notes_atomic/`
 - **Setup**: See [Tools & Setup - Google Colab](TOOLS_AND_SETUP.md#google-colab)
 
-#### codebases/ (other)
-- **Purpose**: Complete codebases for projects
-
 #### sandboxes/
-- **Purpose**: Scrap code for experimentation
+- **Purpose**: Scrap code for experimentation and quick prototypes
+
+#### codebases/
+- **Purpose**: Complete codebases for larger projects
 
 **Use Cases**:
 - Monte Carlo simulations
