@@ -1,5 +1,6 @@
 _site/
 *.html
+!publishing/template_website/dark-mode-handler.html
 .DS_Store
 .luarc.json
 
