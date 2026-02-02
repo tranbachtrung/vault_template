@@ -50,10 +50,10 @@ format:
     mainfont: "STIX Two Text"
     comments:
       giscus:
-        repo: "[username]/[repository]"  # Replace with your GitHub repo (e.g., johndoe/my-study-guide)
-        repo-id: "[repo-id]"  # Get from https://giscus.app after configuring
-        category: "Comments"  # GitHub Discussions category to use
-        category-id: "[category-id]"  # Get from https://giscus.app
+        repo: "tranbachtrung/vault_template"  # Replace with your GitHub repo (e.g., johndoe/my-study-guide)
+        repo-id: "R_kgDORHGyhQ"  # Get from https://giscus.app after configuring
+        category: "General"  # GitHub Discussions category to use
+        category-id: "DIC_kwDORHGyhc4C1yFO"  # Get from https://giscus.app
         mapping: "pathname"  # Map comments to page pathname
         reactions-enabled: true  # Enable reaction emojis
         loading: "lazy"  # Lazy load comments for better performance

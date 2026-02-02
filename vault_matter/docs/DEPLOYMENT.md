@@ -506,7 +506,7 @@ After filling the form, giscus will show a script tag. Extract these values:
 <script src="https://giscus.app/client.js"
         data-repo="username/repository"
         data-repo-id="R_kgDOHxample"         <!-- Copy this -->
-        data-category="Comments"
+        data-category="General"
         data-category-id="DIC_kwDOExample"   <!-- Copy this -->
         ...
 </script>
@@ -528,7 +528,7 @@ format:
       giscus:
         repo: "username/repository"          # Your GitHub username/repo
         repo-id: "R_kgDOHxample"            # From giscus.app
-        category: "Comments"                 # Discussion category name
+        category: "General"                 # Discussion category name
         category-id: "DIC_kwDOExample"      # From giscus.app
         mapping: "pathname"                  # Keep as pathname
         reactions-enabled: true              # Allow reactions

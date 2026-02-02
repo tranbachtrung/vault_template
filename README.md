@@ -1,6 +1,8 @@
-# Mathematical Knowledge Vault
+# Knowledge Vault
 
 > An integrated knowledge management system combining Obsidian for atomic note-taking with Quarto for professional publishing.
+
+Template Website: https://tranbachtrung.github.io/vault_template/
 
 [![Obsidian](https://img.shields.io/badge/Obsidian-7C3AED?style=flat&logo=obsidian&logoColor=white)](https://obsidian.md/)
 [![Quarto](https://img.shields.io/badge/Quarto-75AADB?style=flat&logo=quarto&logoColor=white)](https://quarto.org/)

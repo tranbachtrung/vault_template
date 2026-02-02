@@ -210,13 +210,13 @@ xcode-select --install
 
 **Initial Setup**:
 ```bash
-cd /path/to/math/
+cd /path/to/vault_template/
 git init
 git add .
 git commit -m "Initial commit"
 
 # Connect to GitHub
-gh repo create math-vault --public --source=. --remote=origin
+gh repo create vault_template --public --source=. --remote=origin
 git push -u origin main
 ```
 
