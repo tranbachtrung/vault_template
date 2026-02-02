@@ -1,0 +1,195 @@
+[
+  {
+    "objectID": "cheatsheets/cheatsheets.html",
+    "href": "cheatsheets/cheatsheets.html",
+    "title": "Quarto Cheatsheet",
+    "section": "",
+    "text": "Below are examples of various syntax used in the notes.",
+    "crumbs": [
+      "Quarto Cheatsheets"
+    ]
+  },
+  {
+    "objectID": "cheatsheets/cheatsheets.html#tikz-picture",
+    "href": "cheatsheets/cheatsheets.html#tikz-picture",
+    "title": "Quarto Cheatsheet",
+    "section": "TikZ Picture",
+    "text": "TikZ Picture\nFigure 1 below illustrates the proper difference A \\triangle B.\n\n\n\n\n\n\nFigure 1: Venn Diagram illustrating the proper difference A \\triangle B.",
+    "crumbs": [
+      "Quarto Cheatsheets"
+    ]
+  },
+  {
+    "objectID": "cheatsheets/cheatsheets.html#python-codeblock",
+    "href": "cheatsheets/cheatsheets.html#python-codeblock",
+    "title": "Quarto Cheatsheet",
+    "section": "Python Codeblock",
+    "text": "Python Codeblock\nFigure 2 below illustrates a line plot on a polar axis.\nDo this once at the top of your notebook/script:\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nplt.rcParams.update({\n    \"font.family\": \"serif\",\n    \"font.serif\": [\"STIX Two Text\"],\n    \"mathtext.fontset\": \"stix\",   # makes math match the font\n    \"savefig.format\": \"svg\",  # default save format\n    \"savefig.transparent\": True, # true transparent background for matplotlib figures\n    \"figure.facecolor\": \"none\",\n    \"axes.facecolor\": \"none\",\n})\n\n#In Jupyter / Quarto notebooks: make display SVGs by default\n%config InlineBackend.figure_format = \"svg\" \n\n\nBelow is the code to generate a figure.\n\n\nCode\n# toy example: cost-per-stage as a convex function of a 1D state\nstates = np.arange(0, 21)\ncost = (states - 10) ** 2 / 10.0  # centered quadratic cost\n\nfig, ax = plt.subplots(figsize=(6, 3.5))\nax.plot(states, cost, marker=\"o\", lw=2, label=\"cost-per-stage $c(x)$\")\nax.set_xlabel(\"state $x$\")\nax.set_ylabel(\"cost $c(x)$\")\nax.set_title(\"Toy cost-per-stage over states\")\nax.legend()\nplt.tight_layout()\nplt.grid()\nplt.show()\n\n\nprint(\"States:\", states)\nprint(\"Cost-per-stage:\", cost)\n\n\n\n\n\n\n\n\nFigure 2: A line plot on cost per stage.\n\n\n\n\n\nStates: [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20]\nCost-per-stage: [10.   8.1  6.4  4.9  3.6  2.5  1.6  0.9  0.4  0.1  0.   0.1  0.4  0.9\n  1.6  2.5  3.6  4.9  6.4  8.1 10. ]\n\n\nBelow is another code to generate Figure 3.\n\n\n\n\n\n\n\n\nFigure 3: Another line plot on cost per stage.",
+    "crumbs": [
+      "Quarto Cheatsheets"
+    ]
+  },
+  {
+    "objectID": "cheatsheets/cheatsheets.html#key-callouts-used-in-the-notes",
+    "href": "cheatsheets/cheatsheets.html#key-callouts-used-in-the-notes",
+    "title": "Quarto Cheatsheet",
+    "section": "Key Callouts Used in The Notes",
+    "text": "Key Callouts Used in The Notes\n\n\n\n\n\n\nDefinition (number): [Key Term]\n\n\n\n[Clear, precise definition of the concept]\n\n\n\n\n\n\n\n\nTheorem (number): [Theorem Name]\n\n\n\n[Statement of the theorem]\n\n\n\n\n\n\n\n\nCorollary (number): [Result Name]\n\n\n\n[Statement of the corollary]\n\n\n\n\n\n\n\n\nExcercise (number):\n\n\n\n[Statement of the excercise]\n\n\n\n\n\n\n\n\nProof:\n\n\n\n\n\n[Details of the proof]\n\n\n\n\n\n\n\n\n\nExample (number):\n\n\n\n[Example content]\n\n\n\n\n\n\n\n\nRemark\n\n\n\n[Details of the remark]\n\n\n\n\n\n\n\n\nQuestion\n\n\n\n[Details of the question]\n\n\n\nExamples of Callout Blocks\n\n\n\n\n\n\nAssumption 2.2.2:\n\n\n\nWe assume that \\mathbb{K} contains the graph of a measurable function from X \\to A; that is there is a measurable function f: X \\to A such that f(x) \\in A(x), \\forall x \\in X. The family of such function is denoted by \\mathbb{F} (see Definition 2.3.1).\n\n\n\n\n\n\n\n\nDefinition 2.2.1: Markov control model\n\n\n\nA Markov control model is a five-tuple \n(X, A, \\{A(x)|x\\in X\\}, Q, c)\n consisting of\n\na Borel space X, called the state space and whose elements are refered to as states;\na Borel space A, called the control or action set;\na family \\{A(x) | x\\in X\\} of nonempty measurable subsets A(x) of A, where A(x) denote the set of feasible controls or actions when the system is in state x, with the property that the set \n\\mathbb{K} := \\{(x, a)|x\\in X, a\\in A(x)\\}\n of feasible state-actions pairs is a measurable subset of X\\times A;\na stochastic kernel Q on X given \\mathbb{K} called transition law;\na measurable function c: \\mathbb{K} \\to \\mathbb{R} called cost-per-stage (or one-stage cost) function.",
+    "crumbs": [
+      "Quarto Cheatsheets"
+    ]
+  },
+  {
+    "objectID": "cheatsheets/cheatsheets.html#all-callout-blocks-variations",
+    "href": "cheatsheets/cheatsheets.html#all-callout-blocks-variations",
+    "title": "Quarto Cheatsheet",
+    "section": "All Callout Blocks Variations",
+    "text": "All Callout Blocks Variations\nHere are some examples/variations of callout-note blocks. More details are found here.\n\n\n\n\n\n\nNote title\n\n\n\n\n\n.callout-note\ncollapse=\"true\"\n\n\n\n\n\n\n\n\n\nNote title\n\n\n\n\n\n.callout-note\nicon=\"false\"\ncollapse=\"true\"\n\n\n\n\n\n\n\n\n\nNote title\n\n\n\n\n\n.callout-note\nappearance=\"simple\"\ncollapse=\"true\"\n\n\n\n\n\n\n\n\n\nNote title\n\n\n\n\n\n.callout-note\nappearance=\"minimal\"\ncollapse=\"true\"\n\n\n\nOther callout blocks are shown below.\n\n\n\n\n\n\nTip title\n\n\n\n\n\n\n\n\n\n\n\n\nWarning title\n\n\n\n\n\n\n\n\n\n\n\n\nCaution title\n\n\n\n\n\n\n\n\n\n\n\n\nImportant title\n\n\n\n\n\n\n\n\n\n\n\n\nNote title\n\n\n\n\n\n.callout-note\ncollapse=\"true\"",
+    "crumbs": [
+      "Quarto Cheatsheets"
+    ]
+  },
+  {
+    "objectID": "cheatsheets/cheatsheets.html#embedding-atomic-notes",
+    "href": "cheatsheets/cheatsheets.html#embedding-atomic-notes",
+    "title": "Quarto Cheatsheet",
+    "section": "Embedding Atomic Notes",
+    "text": "Embedding Atomic Notes\n\n\n\n\n\n\nDefinition: proper difference\n\n\n\nLet A and B be sets. A set difference A\\backslash B = A \\cap B^c and B is a proper (or strict) subset of A, i.e., B \\subset A (or B \\subsetneq A).\n\n\n\n\n\n\n\n\n\nDefinition: symmetric difference\n\n\n\nThe symmetric difference of A and B is given by \nA \\triangle B = (A \\backslash B) \\cup (B \\backslash A).\n Venn diagram of symmetric difference: \n\n\n\n\n\n\n\n\nDefinition: pairwise disjoint\n\n\n\nLet \\{A_i\\} be a collection of sets. We say the A_i’s are pairwise disjoint if that A_i \\cap A_j = \\emptyset if i \\neq j. We say that the collection is \\{A_i\\} disjoint.",
+    "crumbs": [
+      "Quarto Cheatsheets"
+    ]
+  },
+  {
+    "objectID": "notes/chapter01/chapter01_01_notes.html",
+    "href": "notes/chapter01/chapter01_01_notes.html",
+    "title": "Chapter 1.1 Notes",
+    "section": "",
+    "text": "Content of the chapter 1.1 goes here."
+  },
+  {
+    "objectID": "notes/notes.html",
+    "href": "notes/notes.html",
+    "title": "Notes Overview",
+    "section": "",
+    "text": "These are the notes for the following sections:\n\nChapter 1: Title title\nChapter 2: Title title",
+    "crumbs": [
+      "Notes"
+    ]
+  },
+  {
+    "objectID": "solutions/solutions.html",
+    "href": "solutions/solutions.html",
+    "title": "Solutions Overview",
+    "section": "",
+    "text": "These are the notes for the following sections:\n\nChapter 1: Title title\nChapter 2: Title title",
+    "crumbs": [
+      "Solutions"
+    ]
+  },
+  {
+    "objectID": "solutions/chapter01/chapter01_sols.html",
+    "href": "solutions/chapter01/chapter01_sols.html",
+    "title": "Chapter 1 Solutions",
+    "section": "",
+    "text": "These are the solutions to the problems in the section:\n\nProblem 1.1\nProblem 1.2",
+    "crumbs": [
+      "Solutions",
+      "Chapter 1 Solutions"
+    ]
+  },
+  {
+    "objectID": "references/references.html#supplementary-textbooks",
+    "href": "references/references.html#supplementary-textbooks",
+    "title": "References and Resources",
+    "section": "Supplementary Textbooks",
+    "text": "Supplementary Textbooks",
+    "crumbs": [
+      "References"
+    ]
+  },
+  {
+    "objectID": "references/references.html#online-resources",
+    "href": "references/references.html#online-resources",
+    "title": "References and Resources",
+    "section": "Online Resources",
+    "text": "Online Resources\n\nVideo Lectures\n\n\nInteractive Tools\n\n\nDiscussion Forums and Communities",
+    "crumbs": [
+      "References"
+    ]
+  },
+  {
+    "objectID": "references/references.html#computational-tools",
+    "href": "references/references.html#computational-tools",
+    "title": "References and Resources",
+    "section": "Computational Tools",
+    "text": "Computational Tools",
+    "crumbs": [
+      "References"
+    ]
+  },
+  {
+    "objectID": "solutions/chapter01/prob01_chapter01_sols.html",
+    "href": "solutions/chapter01/prob01_chapter01_sols.html",
+    "title": "Problem 1 - Chapter 1",
+    "section": "",
+    "text": "Problem statement:\nSolution:"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "[Book Title] Study Guide by [Your Name]",
+    "section": "",
+    "text": "This website contains my notes and exercise solutions for:\n[citation]\nFor example:\nO. Hernández-Lerma and J. B. Lasserre, Discrete-Time Markov Control Processes. New York, NY: Springer, 1996. doi: 10.1007/978-1-4612-0729-0.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#about-this-study-guide",
+    "href": "index.html#about-this-study-guide",
+    "title": "[Book Title] Study Guide by [Your Name]",
+    "section": "About This Study Guide",
+    "text": "About This Study Guide\nThis study guide provides a structured approach to learning from the textbook.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#chapter-notes",
+    "href": "index.html#chapter-notes",
+    "title": "[Book Title] Study Guide by [Your Name]",
+    "section": "Chapter Notes",
+    "text": "Chapter Notes\nDetailed notes for each chapter:\n\nChapter 1 - [Title Title]: Notes\nChapter 2 - [Title Title]: Notes",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#exercise-solutions",
+    "href": "index.html#exercise-solutions",
+    "title": "[Book Title] Study Guide by [Your Name]",
+    "section": "Exercise Solutions",
+    "text": "Exercise Solutions\nSolutions to exercises from each chapter:\n\nChapter 1 - [Title Title]: Solutions\nChapter 2 - [Title Title]: Solutions",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "notes/chapter01/chapter01_notes.html",
+    "href": "notes/chapter01/chapter01_notes.html",
+    "title": "Chapter 1 Notes",
+    "section": "",
+    "text": "These are the notes for the following subsections:\n\nChapter 1.1: Title title\nChapter 1.2: Title title",
+    "crumbs": [
+      "Notes",
+      "Chapter 1"
+    ]
+  },
+  {
+    "objectID": "notes/chapter01/chapter01_02_notes.html",
+    "href": "notes/chapter01/chapter01_02_notes.html",
+    "title": "Chapter 1.1 Notes",
+    "section": "",
+    "text": "Content of the chapter 1.1 goes here."
+  }
+]
