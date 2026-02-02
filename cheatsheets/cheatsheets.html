@@ -310,7 +310,7 @@ Figure&nbsp;1: Venn Diagram illustrating the proper difference <span class="math
 <h2 data-collapse="true" class="anchored" data-anchor-id="python-codeblock">Python Codeblock</h2>
 <p><a href="#fig-cost" class="quarto-xref">Figure&nbsp;2</a> below illustrates a line plot on a polar axis.</p>
 <p>Do this once at the top of your notebook/script:</p>
-<div id="55d51e4d" class="cell" data-execution_count="1">
+<div id="137bf8d2" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -748,11 +748,51 @@ function updateSVGColors() {
   });
 }
 
+// Initialize Giscus theme on page load
+function initializeGiscusTheme() {
+  // Check if we're in dark mode
+  const isDark = document.querySelector('link[id="quarto-bootstrap"][data-mode="dark"]:not([rel*="prefetch"])') !== null;
+  
+  // Get theme values from hidden inputs
+  const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+  const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+  const correctTheme = isDark ? alternateTheme : baseTheme;
+  
+  // Function to change Giscus theme
+  const changeGiscusTheme = () => {
+    const iframe = document.querySelector('iframe.giscus-frame');
+    if (!iframe) return;
+    iframe.contentWindow.postMessage(
+      { giscus: { setConfig: { theme: correctTheme } } },
+      'https://giscus.app'
+    );
+  };
+  
+  // Wait for Giscus iframe to load, then set theme
+  const checkGiscusLoaded = setInterval(() => {
+    const iframe = document.querySelector('iframe.giscus-frame');
+    if (iframe) {
+      clearInterval(checkGiscusLoaded);
+      // Wait a bit for iframe to be ready
+      setTimeout(changeGiscusTheme, 100);
+    }
+  }, 100);
+  
+  // Stop checking after 10 seconds
+  setTimeout(() => clearInterval(checkGiscusLoaded), 10000);
+}
+
 // Run on page load
-document.addEventListener('DOMContentLoaded', updateSVGColors);
+document.addEventListener('DOMContentLoaded', () => {
+  updateSVGColors();
+  initializeGiscusTheme();
+});
 
 // Watch for theme changes
-const observer = new MutationObserver(updateSVGColors);
+const observer = new MutationObserver(() => {
+  updateSVGColors();
+  initializeGiscusTheme();
+});
 observer.observe(document.documentElement, { 
   attributes: true, 
   attributeFilter: ['class'],
@@ -760,7 +800,10 @@ observer.observe(document.documentElement, {
 });
 
 // Also watch for stylesheet changes
-const linkObserver = new MutationObserver(updateSVGColors);
+const linkObserver = new MutationObserver(() => {
+  updateSVGColors();
+  initializeGiscusTheme();
+});
 document.querySelectorAll('link').forEach(link => {
   linkObserver.observe(link, { attributes: true, attributeFilter: ['rel'] });
 });

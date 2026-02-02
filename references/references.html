@@ -264,11 +264,51 @@ function updateSVGColors() {
   });
 }
 
+// Initialize Giscus theme on page load
+function initializeGiscusTheme() {
+  // Check if we're in dark mode
+  const isDark = document.querySelector('link[id="quarto-bootstrap"][data-mode="dark"]:not([rel*="prefetch"])') !== null;
+  
+  // Get theme values from hidden inputs
+  const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+  const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+  const correctTheme = isDark ? alternateTheme : baseTheme;
+  
+  // Function to change Giscus theme
+  const changeGiscusTheme = () => {
+    const iframe = document.querySelector('iframe.giscus-frame');
+    if (!iframe) return;
+    iframe.contentWindow.postMessage(
+      { giscus: { setConfig: { theme: correctTheme } } },
+      'https://giscus.app'
+    );
+  };
+  
+  // Wait for Giscus iframe to load, then set theme
+  const checkGiscusLoaded = setInterval(() => {
+    const iframe = document.querySelector('iframe.giscus-frame');
+    if (iframe) {
+      clearInterval(checkGiscusLoaded);
+      // Wait a bit for iframe to be ready
+      setTimeout(changeGiscusTheme, 100);
+    }
+  }, 100);
+  
+  // Stop checking after 10 seconds
+  setTimeout(() => clearInterval(checkGiscusLoaded), 10000);
+}
+
 // Run on page load
-document.addEventListener('DOMContentLoaded', updateSVGColors);
+document.addEventListener('DOMContentLoaded', () => {
+  updateSVGColors();
+  initializeGiscusTheme();
+});
 
 // Watch for theme changes
-const observer = new MutationObserver(updateSVGColors);
+const observer = new MutationObserver(() => {
+  updateSVGColors();
+  initializeGiscusTheme();
+});
 observer.observe(document.documentElement, { 
   attributes: true, 
   attributeFilter: ['class'],
@@ -276,7 +316,10 @@ observer.observe(document.documentElement, {
 });
 
 // Also watch for stylesheet changes
-const linkObserver = new MutationObserver(updateSVGColors);
+const linkObserver = new MutationObserver(() => {
+  updateSVGColors();
+  initializeGiscusTheme();
+});
 document.querySelectorAll('link').forEach(link => {
   linkObserver.observe(link, { attributes: true, attributeFilter: ['rel'] });
 });
