@@ -4,7 +4,7 @@ aliases:
 type: definition
 created: 2026-01-29 16:46:35
 edited: 2026-01-29
-reference:
+reference: 
 ---
 ## Definition: proper difference
 Let $A$ and $B$ be sets. A set difference $A\backslash B = A \cap B^c$ and $B$ is a proper (or strict) subset of $A$, i.e., $B \subset A$ (or $B \subsetneq A$).

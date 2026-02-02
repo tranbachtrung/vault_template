@@ -1,0 +1,22 @@
+/* Center all TikZ-generated images */
+img[src*="tikz-"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Also center figures containing TikZ */
+figure:has(img[src*="tikz-"]) {
+  text-align: center;
+}
+
+/* Center Python/Jupyter cell outputs (matplotlib plots, etc.) */
+.cell-output-display {
+  text-align: center;
+}
+
+.cell-output-display img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

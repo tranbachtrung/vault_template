@@ -1,5 +1,5 @@
 ---
-aliases: []
+aliases:
 type: counter example
 created: "{{date}} {{time}}"
 edited: "{{date}}"

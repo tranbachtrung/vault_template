@@ -1,5 +1,5 @@
 ---
-aliases: []
+aliases:
 type: example
 created: "{{date}} {{time}}"
 edited: "{{date}}"

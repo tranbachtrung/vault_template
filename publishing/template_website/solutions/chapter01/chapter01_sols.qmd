@@ -1,0 +1,8 @@
+---
+title: Chapter 1 Solutions
+---
+
+These are the solutions to the problems in the section:
+
+- [Problem 1.1](prob01_chapter01_sols.qmd)
+- [Problem 1.2](prob02_chapter01_sols.qmd)

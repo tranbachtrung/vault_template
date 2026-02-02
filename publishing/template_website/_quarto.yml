@@ -1,0 +1,68 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "<i>[Book Title]<i> <br> Study Guide by [Your Name]"
+  navbar:
+    right:
+      - icon: github
+        href: https://github.com/[username]/[repository]
+        aria-label: GitHub
+
+  sidebar:
+    style: "docked"
+    contents:
+      - text: "Home"
+        href: index.qmd
+
+      - section: "Notes"
+        href: notes/notes.qmd
+        contents:
+          - text: "Chapter 1"
+            href: notes/chapter01/chapter01_notes.qmd
+
+      - section: "Solutions"
+        href: solutions/solutions.qmd
+        contents:
+          - text: "Chapter 1 Solutions"
+            href: solutions/chapter01/chapter01_sols.qmd
+
+      - text: "References"
+        href: references/references.qmd
+
+      - text: "Quarto Cheatsheets"
+        href: cheatsheets/cheatsheets.qmd
+  
+format:
+  html:
+    theme: 
+      light: flatly
+      dark: darkly
+    css: styles.css
+    include-after-body: dark-mode-handler.html
+    toc: true
+    toc-location: right
+    number-sections: false
+    code-fold: true
+    html-math-method: katex
+    code-line-numbers: true
+    mainfont: "STIX Two Text"
+    comments:
+      giscus:
+        repo: "[username]/[repository]"  # Replace with your GitHub repo (e.g., johndoe/my-study-guide)
+        repo-id: "[repo-id]"  # Get from https://giscus.app after configuring
+        category: "Comments"  # GitHub Discussions category to use
+        category-id: "[category-id]"  # Get from https://giscus.app
+        mapping: "pathname"  # Map comments to page pathname
+        reactions-enabled: true  # Enable reaction emojis
+        loading: "lazy"  # Lazy load comments for better performance
+        input-position: "top"  # Comment box position (top or bottom)
+        theme: "preferred_color_scheme"  # Auto-match light/dark mode
+
+filters:
+  - ../_settings/filters/atomic-include.lua
+  - ../_settings/filters/obsidian-yaml-fix.lua
+  - ../_settings/filters/obsidian-wikilinks.lua
+  - ../_settings/filters/obsidian-tikz.lua
+  - danmackinlay/tikz

@@ -1,0 +1,7 @@
+---
+title: Notes Overview
+---
+These are the notes for the following sections:
+
+- [Chapter 1: Title title](chapter01_notes.qmd)
+- [Chapter 2: Title title](chapter02_notes.qmd)

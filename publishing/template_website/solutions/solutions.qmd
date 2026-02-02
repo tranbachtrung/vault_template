@@ -1,0 +1,8 @@
+---
+title: Solutions Overview
+---
+
+These are the notes for the following sections:
+
+- [Chapter 1: Title title](chapter01/chapter01_sols.qmd)
+- [Chapter 2: Title title](chapter02/chapter02_sols.qmd)

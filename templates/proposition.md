@@ -1,5 +1,5 @@
 ---
-aliases: []
+aliases:
 type: proposition
 created: "{{date}} {{time}}"
 edited: "{{date}}"

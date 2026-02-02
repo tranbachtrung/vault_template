@@ -1,0 +1,29 @@
+---
+title: "*[Book Title]* Study Guide by [Your Name]"
+---
+
+This website contains my notes and exercise solutions for:
+
+[citation]
+
+For example:
+
+O. Hernández-Lerma and J. B. Lasserre, Discrete-Time Markov Control Processes. New York, NY: Springer, 1996. doi: 10.1007/978-1-4612-0729-0.
+
+## About This Study Guide
+
+This study guide provides a structured approach to learning from the textbook.
+
+## [Chapter Notes](notes/notes.qmd)
+Detailed notes for each chapter:
+
+- Chapter 1 - [Title Title]: [Notes](notes/chapter01/chapter01_notes.qmd)
+- Chapter 2 - [Title Title]: [Notes](notes/chapter02/chapter02_notes.qmd)
+
+## [Exercise Solutions](solutions/solutions.qmd)
+Solutions to exercises from each chapter:
+
+- Chapter 1 - [Title Title]: [Solutions](solutions/chapter01/chapter01_sols.qmd)
+- Chapter 2 - [Title Title]: [Solutions](solutions/chapter02/chapter02_sols.qmd)
+
+

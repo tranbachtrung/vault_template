@@ -2,3 +2,7 @@ _site/
 .quarto/
 *.html
 .DS_Store
+
+/.quarto/
+
+/.luarc.json

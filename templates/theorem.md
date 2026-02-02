@@ -1,5 +1,5 @@
 ---
-aliases: []
+aliases:
 type: theorem
 created: "{{date}} {{time}}"
 edited: "{{date}}"

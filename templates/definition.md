@@ -1,5 +1,5 @@
 ---
-aliases: []
+aliases:
 type: definition
 created: "{{date}} {{time}}"
 edited: "{{date}}"

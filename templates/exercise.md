@@ -1,5 +1,5 @@
 ---
-aliases: []
+aliases:
 type: exercise
 created: "{{date}} {{time}}"
 edited: "{{date}}"
