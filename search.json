@@ -54,7 +54,7 @@
     "href": "cheatsheets/cheatsheets.html#embedding-atomic-notes",
     "title": "Quarto Cheatsheet",
     "section": "Embedding Atomic Notes",
-    "text": "Embedding Atomic Notes\n\n\n\n\n\n\nDefinition: proper difference\n\n\n\nLet A and B be sets. A set difference A\\backslash B = A \\cap B^c and B is a proper (or strict) subset of A, i.e., B \\subset A (or B \\subsetneq A).\n\n\n\n\n\n\n\n\n\nDefinition: symmetric difference\n\n\n\nThe symmetric difference of A and B is given by \nA \\triangle B = (A \\backslash B) \\cup (B \\backslash A).\n Venn diagram of symmetric difference: \n\n\n\n\n\n\n\n\nDefinition: pairwise disjoint\n\n\n\nLet \\{A_i\\} be a collection of sets. We say the A_i’s are pairwise disjoint if that A_i \\cap A_j = \\emptyset if i \\neq j. We say that the collection is \\{A_i\\} disjoint.",
+    "text": "Embedding Atomic Notes\n\n\n\n\n\n\nDefinition: proper difference\n\n\n\nLet A and B be sets. A set difference A\\backslash B = A \\cap B^c and B is a proper (or strict) subset of A, i.e., B \\subset A (or B \\subsetneq A).\n\n\n\n\n\n\n\n\n\nDefinition: symmetric difference\n\n\n\nThe symmetric difference of A and B is given by \nA \\triangle B = (A \\backslash B) \\cup (B \\backslash A).\n Venn diagram of symmetric difference: \n\n\n\n\n\n\n\n\nDefinition: pairwise disjoint\n\n\n\nLet \\{A_i\\} be a collection of sets. We say the A_i’s are pairwise disjoint if that A_i \\cap A_j = \\emptyset if i \\neq j. We say that the collection is \\{A_i\\} disjoint.\n\n\n\n\n\n\n\n\nDefinition: test theorem\n\n\n\n\nA = \\sum_{i=1}^N a_i",
     "crumbs": [
       "Quarto Cheatsheets"
     ]
