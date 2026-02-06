@@ -244,3 +244,8 @@ collapse="true"
 ## Definition: pairwise disjoint
 {{< atomic ../../_notes_atomic/pairwise disjoint (test).md ## Definition: pairwise disjoint >}}
 :::
+
+::: {.callout-note icon="false"}
+## Definition: test theorem
+{{< atomic ../../_notes_atomic/test theorem.md ## Theorem # ([[]], pg. #): theorem name >}}
+:::
